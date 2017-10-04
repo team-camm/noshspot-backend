@@ -2,12 +2,77 @@ const express = require('express');
 const router = express.Router();
 const Restaurant = require('../models/Restaurant');
 const Customer = require('../models/Customer');
+
 router.get('/', (req, res) => {
     
     Restaurant
         .find()
-        .then(restaurant => {
-            res.status(200).json(resturant);
+        .then(restaurants => {
+            res.status(200).json(restaurants);
         });
 });
+
+router.get('/nearby', (req, res) => {
+    
+    Restaurant
+        .find()
+        .where('').lt('').exec(err => console.log(err))
+        .then(restaurant => {
+            res.status(200).json(restaurant);
+        });
+});
+
+router.post('/new', (req, res) => {
+    
+    Restaurant
+        .create(req.body)
+        .then(restaurant => {
+            res.status(200).json(restaurant);
+        });
+});
+
+router.post('/fakedata', (req, res) => {
+    var restaurants = [
+        {
+            restaurantName: "Chili's",
+            email: "chilis@chilis.com",
+            password: "chilis",
+            address: "123 Main St",
+            phone: "555-555-5555",
+            yelpUrl: "yelp.chilis.com",
+            website: "chilis.com",
+            hours: "9AM-9PM",
+            facebook: "facebook.com/chilis",
+            restaurantDesc: "American food, served in an uninviting atmosphere.",
+            paymentAddress: "123 Main St",
+            annualRevenue: "1,000,000",
+            image: "chilis.jpg",
+            tags: ['American', 'Burger', 'Chili', 'Cheese']
+        },
+        {
+            restaurantName: "Chipotle",
+            email: "notreal@mexican.food",
+            password: "queso",
+            address: "123 fake street",
+            phone: "645-373-9099",
+            hours: "12AM-12AM",
+            yelpUrl: "yelp/chiptole.com",
+            website: "chiptole.com",
+            facebook: "facebook.com/chiptole",
+            restaurantDesc: "The Subway of burritos.",
+            paymentAddress: "123 Calle de Origin",
+            annualRevenue: "99,999,999",
+            image: "burrito.jpg",
+            tags: ["Mexican", "Tacos", "Burritos", "Queso"]
+           }
+       
+    ]
+    restaurants.forEach( rest => {
+        Restaurant
+        .create(rest);
+    })
+    res.status(200).json(restaurants);
+   
+});
+
 module.exports = router;

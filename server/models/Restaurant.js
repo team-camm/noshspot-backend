@@ -7,17 +7,17 @@ const RestaurantSchema = new Schema({
     address: { type: String, required: true },
     phone: { type: String, required: true },
     hours: { type: String, required: true },
-    yelp_url: { type: String, required: true },
+    yelpUrl: { type: String, required: true },
     website: { type: String, required: true },
     facebook: { type: String, required: true },
-    menu: { 
+    menu: [{ 
         description: {type: String, required: true },
         name:  {type: String, required: true },
         price:  {type: String, required: true },
-        },
-    restaurant_desc: { type: String, required: true },
-    payment_address: { type: String, required: true },
-    annual_revenue: { type: String, required: true },
+        }],
+    restaurantDesc: { type: String, required: true },
+    paymentAddress: { type: String, required: true },
+    annualRevenue: { type: String, required: true },
     image: { type: String, required: true },
     tags:  [{type: String, required: true }]
   })
