@@ -12,6 +12,30 @@ router.get('/', (req, res) => {
         });
 });
 
+router.get('/:id', (req, res) => {
+    
+    Restaurant
+        .findById(req.params.id)
+        .then(restaurant => {
+            if (restaurant) {
+                res.status(200).json(restaurant);
+            } else {
+                res.status(404).send('No restaurant found!')
+            }
+        });
+});
+
+router.put('/:id', (req,res) => {
+    // console.log(req.body)
+    Restaurant.findByIdAndUpdate(req.params.id, { $set: req.body },  (err) => {
+      if (err) return console.log(err);
+    })
+    Restaurant.findById(req.params.id)
+    .then(rest => {
+      res.status(204).json(rest);
+    });
+  });
+
 router.get('/nearby', (req, res) => {
     
     Restaurant
@@ -29,6 +53,13 @@ router.post('/new', (req, res) => {
         .then(restaurant => {
             res.status(200).json(restaurant);
         });
+});
+
+router.delete('/:id', (req,res) => {
+    Restaurant.findByIdAndRemove(req.params.id, (err) => {
+      if (err) return handleError(err);
+    });
+    res.status(200).send('deleted');
 });
 
 router.post('/fakedata', (req, res) => {
