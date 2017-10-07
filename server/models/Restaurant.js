@@ -18,7 +18,7 @@ const RestaurantSchema = new Schema({
     restaurantDesc: { type: String, required: true },
     paymentAddress: { type: String, required: true },
     annualRevenue: { type: String, required: true },
-    image: { type: String, required: true },
-    tags:  [{type: String, required: true }]
+    image: { type: String, required: false },
+    tags:  [{type: String, required: false }]
   })
     module.exports = mongoose.model('Restaurant', RestaurantSchema);

@@ -47,7 +47,7 @@ router.get('/nearby', (req, res) => {
 });
 
 router.post('/new', (req, res) => {
-    
+    console.log('THE BODY',req.body)
     Restaurant
         .create(req.body)
         .then(restaurant => {
