@@ -68,7 +68,7 @@ router.post('/fakedata', (req, res) => {
             restaurantName: "Chili's",
             email: "chilis@chilis.com",
             password: "chilis",
-            address: "123 Main St",
+            address: "3665 North Harbor Drive, Main Terminal, San Diego, CA 92101",
             phone: "555-555-5555",
             yelpUrl: "yelp.chilis.com",
             website: "chilis.com",
@@ -84,7 +84,23 @@ router.post('/fakedata', (req, res) => {
             restaurantName: "Chipotle",
             email: "notreal@mexican.food",
             password: "queso",
-            address: "123 fake street",
+            address: "101 W Broadway, San Diego, CA 92101",
+            phone: "645-373-9099",
+            hours: "12AM-12AM",
+            yelpUrl: "yelp/chiptole.com",
+            website: "chiptole.com",
+            facebook: "facebook.com/chiptole",
+            restaurantDesc: "The Subway of burritos.",
+            paymentAddress: "123 Calle de Origin",
+            annualRevenue: "99,999,999",
+            image: "burrito.jpg",
+            tags: ["Mexican", "Tacos", "Burritos", "Queso"]
+           },
+           {
+            restaurantName: "Chipotle",
+            email: "notreal@mexican.food",
+            password: "queso",
+            address: "307 N Sepulveda Blvd, El Segundo, CA 90245",
             phone: "645-373-9099",
             hours: "12AM-12AM",
             yelpUrl: "yelp/chiptole.com",
@@ -96,7 +112,6 @@ router.post('/fakedata', (req, res) => {
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"]
            }
-       
     ]
     restaurants.forEach( rest => {
         Restaurant
