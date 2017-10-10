@@ -47,7 +47,6 @@ router.get('/nearby', (req, res) => {
 });
 
 router.post('/new', (req, res) => {
-    console.log('THE BODY',req.body)
     Restaurant
         .create(req.body)
         .then(restaurant => {
@@ -91,7 +90,7 @@ router.post('/fakedata', (req, res) => {
             website: "chiptole.com",
             facebook: "facebook.com/chiptole",
             restaurantDesc: "The Subway of burritos.",
-            paymentAddress: "123 Calle de Origin",
+            paymentAddress: "101 W Broadway, San Diego",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"]
@@ -107,7 +106,7 @@ router.post('/fakedata', (req, res) => {
             website: "chiptole.com",
             facebook: "facebook.com/chiptole",
             restaurantDesc: "The Subway of burritos.",
-            paymentAddress: "123 Calle de Origin",
+            paymentAddress: "700 B St, San Diego",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"]
