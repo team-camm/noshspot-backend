@@ -110,11 +110,7 @@ router.post('/fakedata', (req, res) => {
             website: "chiptole.com",
             facebook: "facebook.com/chiptole",
             restaurantDesc: "The Subway of burritos.",
-<<<<<<< HEAD
             paymentAddress: "101 W Broadway, San Diego",
-=======
-            paymentAddress: "700 B St, San Diego",
->>>>>>> c7d15f1185517c505c5e25c347bcb7693c5b314e
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"],

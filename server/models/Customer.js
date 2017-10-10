@@ -9,4 +9,10 @@ const CustomerSchema = new Schema({
     favorites: [{ type: Schema.Types.ObjectId, ref: "Restaurant" }],
     history: [{ type: String, required: false }]
   })
-    module.exports = mongoose.model('Customer', CustomerSchema);
+
+CustomerSchema.methods.validPassword = function( pwd ) {
+  
+return ( this.password === pwd );
+};
+
+module.exports = mongoose.model('Customer', CustomerSchema);
