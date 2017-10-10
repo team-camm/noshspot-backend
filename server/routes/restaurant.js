@@ -79,7 +79,16 @@ router.post('/fakedata', (req, res) => {
             image: "chilis.jpg",
             tags: ['American', 'Burger', 'Chili', 'Cheese'],
             lat: "32.7154792",
-            lng: "-117.16363130000002"
+            lng: "-117.16363130000002",
+            menu: [
+                {name: 'Cheeseburger', price: '7.50'},
+                {name: 'Hamburger', price: '7.50'},
+                {name: 'Steak', price: '7.50'},
+                {name: 'Margarita', price: '7.50'},
+                {name: 'Queso Dip', price: '7.50'},
+                {name: 'Ceasar Salad', price: '7.50'},
+                {name: 'Pasta', price: '7.50'}
+            ]
         },
         {
             restaurantName: "Chipotle",
@@ -97,7 +106,14 @@ router.post('/fakedata', (req, res) => {
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"],
             lat: "32.7150214",
-            lng: "-117.16429579999999"
+            lng: "-117.16429579999999",
+            menu: [
+                {name: 'Burrito', price: '7.50'},
+                {name: 'Taco', price: '7.50'},
+                {name: 'Bowl', price: '7.50'},
+                {name: 'Salad', price: '7.50'},
+                {name: 'Chips', price: '7.50'}
+            ]
            },
            {
             restaurantName: "Chipotle",
@@ -115,7 +131,14 @@ router.post('/fakedata', (req, res) => {
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"],
             lat: "33.9196736",
-            lng: "-118.39648460000001"
+            lng: "-118.39648460000001",
+            menu: [
+                {name: 'Burrito', price: '7.50'},
+                {name: 'Taco', price: '7.50'},
+                {name: 'Bowl', price: '7.50'},
+                {name: 'Salad', price: '7.50'},
+                {name: 'Chips', price: '7.50'}
+            ]
            }
     ]
     restaurants.forEach( rest => {
