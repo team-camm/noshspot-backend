@@ -78,7 +78,9 @@ router.post('/fakedata', (req, res) => {
             paymentAddress: "123 Main St",
             annualRevenue: "1,000,000",
             image: "chilis.jpg",
-            tags: ['American', 'Burger', 'Chili', 'Cheese']
+            tags: ['American', 'Burger', 'Chili', 'Cheese'],
+            lat: "32.7154792",
+            lng: "-117.16363130000002"
         },
         {
             restaurantName: "Chipotle",
@@ -94,7 +96,9 @@ router.post('/fakedata', (req, res) => {
             paymentAddress: "123 Calle de Origin",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
-            tags: ["Mexican", "Tacos", "Burritos", "Queso"]
+            tags: ["Mexican", "Tacos", "Burritos", "Queso"],
+            lat: "32.7150214",
+            lng: "-117.16429579999999"
            },
            {
             restaurantName: "Chipotle",
@@ -110,7 +114,9 @@ router.post('/fakedata', (req, res) => {
             paymentAddress: "123 Calle de Origin",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
-            tags: ["Mexican", "Tacos", "Burritos", "Queso"]
+            tags: ["Mexican", "Tacos", "Burritos", "Queso"],
+            lat: "33.9196736",
+            lng: "-118.39648460000001"
            }
     ]
     restaurants.forEach( rest => {
