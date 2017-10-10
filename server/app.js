@@ -17,6 +17,14 @@ app.use(function(req, res, next) {
 app.get('/', (req, res) => {
     res.status(200).send('Hello');
 })
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    next();
+  });
+
 app.use('/api/customer', require('./routes/customer'));
 app.use('/api/restaurant', require('./routes/restaurant'));
 module.exports = app;
