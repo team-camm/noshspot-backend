@@ -75,7 +75,7 @@ router.post('/fakedata', (req, res) => {
             hours: "9AM-9PM",
             facebook: "facebook.com/chilis",
             restaurantDesc: "American food, served in an uninviting atmosphere.",
-            paymentAddress: "123 Main St",
+            paymentAddress: "101 W Broadway, San Diego",
             annualRevenue: "1,000,000",
             image: "chilis.jpg",
             tags: ['American', 'Burger', 'Chili', 'Cheese']
@@ -91,7 +91,7 @@ router.post('/fakedata', (req, res) => {
             website: "chiptole.com",
             facebook: "facebook.com/chiptole",
             restaurantDesc: "The Subway of burritos.",
-            paymentAddress: "123 Calle de Origin",
+            paymentAddress: "101 W Broadway, San Diego",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"]
@@ -107,7 +107,7 @@ router.post('/fakedata', (req, res) => {
             website: "chiptole.com",
             facebook: "facebook.com/chiptole",
             restaurantDesc: "The Subway of burritos.",
-            paymentAddress: "123 Calle de Origin",
+            paymentAddress: "101 W Broadway, San Diego",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
             tags: ["Mexican", "Tacos", "Burritos", "Queso"]

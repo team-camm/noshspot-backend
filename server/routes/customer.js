@@ -38,10 +38,11 @@ router.put('/:id', (req,res) => {
   });
 
 router.post('/new', (req, res) => {
-    
+    console.log(req.body);
     Customer
         .create(req.body)
         .then(customer => {
+            
             res.status(200).json(customer);
         });
 });
