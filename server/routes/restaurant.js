@@ -47,7 +47,6 @@ router.get('/nearby', (req, res) => {
 });
 
 router.post('/new', (req, res) => {
-    console.log('THE BODY',req.body)
     Restaurant
         .create(req.body)
         .then(restaurant => {
@@ -78,7 +77,9 @@ router.post('/fakedata', (req, res) => {
             paymentAddress: "101 W Broadway, San Diego",
             annualRevenue: "1,000,000",
             image: "chilis.jpg",
-            tags: ['American', 'Burger', 'Chili', 'Cheese']
+            tags: ['American', 'Burger', 'Chili', 'Cheese'],
+            lat: "32.7154792",
+            lng: "-117.16363130000002"
         },
         {
             restaurantName: "Chipotle",
@@ -94,7 +95,9 @@ router.post('/fakedata', (req, res) => {
             paymentAddress: "101 W Broadway, San Diego",
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
-            tags: ["Mexican", "Tacos", "Burritos", "Queso"]
+            tags: ["Mexican", "Tacos", "Burritos", "Queso"],
+            lat: "32.7150214",
+            lng: "-117.16429579999999"
            },
            {
             restaurantName: "Chipotle",
@@ -107,10 +110,16 @@ router.post('/fakedata', (req, res) => {
             website: "chiptole.com",
             facebook: "facebook.com/chiptole",
             restaurantDesc: "The Subway of burritos.",
+<<<<<<< HEAD
             paymentAddress: "101 W Broadway, San Diego",
+=======
+            paymentAddress: "700 B St, San Diego",
+>>>>>>> c7d15f1185517c505c5e25c347bcb7693c5b314e
             annualRevenue: "99,999,999",
             image: "burrito.jpg",
-            tags: ["Mexican", "Tacos", "Burritos", "Queso"]
+            tags: ["Mexican", "Tacos", "Burritos", "Queso"],
+            lat: "33.9196736",
+            lng: "-118.39648460000001"
            }
     ]
     restaurants.forEach( rest => {
