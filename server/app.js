@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const customerModel = require('./models/Customer.js');
 const restaurantModel = require('./models/Restaurant.js');
 const app = express();
-mongoose.connect('mongodb://localhost/noshspot', { useMongoClient: true });
+mongoose.connect('mongodb://' + process.env.DBUSERNAME + ':' + process.env.DBPASSWORD + '@ds123728.mlab.com:23728/noshspot', { useMongoClient: true });
 mongoose.Promise = Promise;
 var session = require("express-session")
 var passport = require('passport')
