@@ -42,7 +42,7 @@ passport.use(new LocalStrategy({
   function(email, password, done) {
       console.log('attempted login');
       Customer.findOne({ email: email }, function(err, user) {
-      if (err) { return done(err); }
+      if (err) { return res.status(200).send('Invalid username/password!'); }
       if (!user) {
           return done(null, false, { message: 'Incorrect username.' });
       }
@@ -57,8 +57,8 @@ passport.use(new LocalStrategy({
 
 app.post('/login', function(req, res, next) {
   passport.authenticate('local', function(err, user, info) {
-    if (err) { return next(err); }
-    if (!user) { return res.redirect('/login'); }
+    if (err) { return res.status(200).send('Invalid username/password!');  }
+    if (!user) { return res.status(200).send('Invalid username/password!');  }
     req.logIn(user, function(err) {
       if (err) { return next(err); }
       return res.status(200).send(user);
